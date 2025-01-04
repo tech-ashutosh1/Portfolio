@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Ashutosh</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Remove Slim version of jQuery for better compatibility with Bootstrap 4 -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+        .navbar {
+            position: relative;
+            z-index: 10; /* Ensures navbar is on top of other elements */
+        }
+        .navbar-collapse {
+            position: relative;
+            z-index: 5; /* Ensures collapse menu is above other elements */
+        }
+
+        /* Back to top button */
+        #backToTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            z-index: 100;
+            border-radius: 50%;
+            background-color: #007bff;
+            color: white;
+            font-size: 20px;
+            padding: 10px 15px;
+        }
+
+        /* Dark Mode Styles */
+        .dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        .dark-mode .navbar,
+        .dark-mode footer {
+            background-color: #1e1e1e;
+        }
+
+        .dark-mode .btn-warning {
+            background-color: #ff9800;
+            border-color: #ff9800;
+        }
+
+        .dark-mode .btn-primary {
+            background-color: #bb86fc;
+            border-color: #bb86fc;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-3">Ashutosh Behera</h1>
+            <p class="lead">Java Developer | DSA | Problem Solver</p>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Portfolio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <a class="nav-link" href="#about">
+                        <li class="nav-item">About</li>
+                    </a>
+                    <a class="nav-link" href="#portfolio">
+                        <li class="nav-item">Portfolio</li>
+                    </a>
+                    <a class="nav-link" href="#java-skills">
+                        <li class="nav-item">Java Skills</li>
+                    </a>
+                    <a class="nav-link" href="#blog">
+                        <li class="nav-item">Blog</li>
+                    </a>
+                    <a class="nav-link" href="#resume">
+                        <li class="nav-item">Resume</li>
+                    </a>
+                    <a class="nav-link" href="#contact">
+                        <li class="nav-item">Contact</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="display-4 text-center">About Me</h2>
+            <div class="row align-items-center mt-5">
+                <div class="col-md-4 text-center">
+                    <img src="images/profile.jpg" alt="Profile Picture" class="img-fluid rounded-circle shadow-lg"
+                        style="width: 200px; height: 200px;">
+                </div>
+                <div class="col-md-8 text-right">
+                    <p class="lead">I am a passionate Java developer with a strong focus on building efficient and
+                        scalable solutions. I have a Bachelor's degree in Computer Science and have been working
+                        with Java for over 5 years.</p>
+                    <p class="lead">In my free time, I enjoy solving problems on platforms like LeetCode and
+                        HackerRank, and contributing to open-source projects on GitHub.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="java-skills" class="text-center py-5">
+        <div class="container">
+            <h2 class="display-4">Java Skills</h2>
+            <p>I have extensive experience in Java development, with a strong focus on object-oriented programming,
+                data structures, and algorithms.</p>
+            <ul>
+                <li>Java 8 and 11</li>
+                <li>Spring Framework</li>
+                <li>Hibernate</li>
+                <li>JavaFX</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="portfolio" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center display-4">Portfolio</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card shadow-sm border-0 mb-4">
+                        <img src="images/project1.jpg" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Project Title</h5>
+                            <p class="card-text">A brief description of this project, technologies used, and my role.</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm border-0 mb-4">
+                        <img src="images/project2.jpg" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Project Title</h5>
+                            <p class="card-text">A brief description of this project, technologies used, and my role.</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more project cards here -->
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="bg-dark text-white py-5">
+        <div class="container">
+            <h2 class="text-center display-4">Blog</h2>
+            <p class="lead">Coming soon...</p>
+        </div>
+    </section>
+
+   
