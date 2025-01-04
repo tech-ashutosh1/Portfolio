@@ -16,6 +16,9 @@
   --background-color: #f9f9f9;
 }
 
+.headings{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 body {
   font-family: 'Montserrat', sans-serif;
   line-height: 1.6;
@@ -177,10 +180,16 @@ section h2 {
   justify-content: center;
 }
 
+.project-card{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 #java-skills li {
   margin-bottom: 10px;
   margin-right: 20px;
   position: relative;
+  padding-left: 25px;
 }
 
 #java-skills li::before {
@@ -316,5 +325,4 @@ footer a:hover {
   #portfolio .card img {
     height: auto;
   }
-
-  #a
+}
