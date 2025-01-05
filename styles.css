@@ -1,4 +1,4 @@
-/* Global Styles */
+Global Styles
 .no-decoration{
   text-decoration: none;
 }
@@ -15,6 +15,30 @@
   --text-color: #666;
   --background-color: #f9f9f9;
 }
+
+/* Styling for the name section */
+.display-3 {
+  font-family: 'Merriweather', serif;
+  font-size: 4.5rem; /* Adjust for the desired size */
+  font-weight: 700; /* Use bold for emphasis */
+  color: #222; /* Rich dark color for prominence */
+  text-align: center;
+  margin-bottom: 1rem;
+  text-transform: capitalize; /* Keeps the first letter uppercase */
+  letter-spacing: 1px; /* Adds subtle spacing between letters */
+  line-height: 1.2; /* Adjust for visual balance */
+}
+
+.tagline {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5rem; /* Adjust size to suit your design */
+  font-weight: 400; /* Normal weight for the tagline */
+  color: #ffffff; /* Ensure it contrasts with the background */
+  text-align: center; /* Center the text */
+  margin-top: 0.5rem; /* Add spacing above the tagline */
+  letter-spacing: 0.5px; /* Subtle letter spacing for readability */
+}
+
 
 .headings{
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -180,11 +204,12 @@ section h2 {
   justify-content: center;
 }
 
-.project-card{
+.project-card, .certificate{
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
+
 #java-skills li {
   margin-bottom: 10px;
   margin-right: 20px;
@@ -322,7 +347,22 @@ footer a:hover {
     padding: 20px;
   }
 
-  #portfolio .card img {
+  #projects .card img {
     height: auto;
   }
+  
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.certificate {
+  margin-bottom: 20px;
 }
