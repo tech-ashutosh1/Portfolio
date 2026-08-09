@@ -385,7 +385,9 @@ document.querySelectorAll('.card').forEach(card => {
 
   const cards = Array.from(grid.querySelectorAll('.card'));
   const total = cards.length;
-  const CARD_W = () => cards[0].getBoundingClientRect().width + 25; // width + gap
+  const GRID_PAD = 60; // must match padding-left in .projects-grid (px)
+  const GAP      = () => parseFloat(getComputedStyle(grid).gap) || 26;
+  const CARD_W   = () => cards[0].getBoundingClientRect().width + GAP();
 
   // Build dots
   cards.forEach((_, i) => {
@@ -399,11 +401,14 @@ document.querySelectorAll('.card').forEach(card => {
   function getDots() { return dotsWrap.querySelectorAll('.projects-dot'); }
 
   function currentIndex() {
-    return Math.round(grid.scrollLeft / CARD_W());
+    // Account for left padding so index 0 maps to scrollLeft ~0
+    return Math.round((grid.scrollLeft) / CARD_W());
   }
 
   function scrollToCard(idx) {
     idx = Math.max(0, Math.min(idx, total - 1));
+    // Each card's left edge (relative to scroll origin) = idx * CARD_W()
+    // scroll-padding-left handles the visual alignment in CSS
     grid.scrollTo({ left: idx * CARD_W(), behavior: 'smooth' });
   }
 

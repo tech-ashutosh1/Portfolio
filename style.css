@@ -714,6 +714,7 @@ section { position: relative; z-index: 1; }
   gap: 1.6rem;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
+  scroll-padding-left: 60px;
   -webkit-overflow-scrolling: touch;
   padding: 1rem 60px 1.5rem;
   scrollbar-width: none;          /* Firefox */
